@@ -68,6 +68,8 @@ public class LoginActivity extends AppCompatActivity {
                         .edit()
                         .putString("userId", userId)
                         .putString("userName", response.body().getUser().getName())
+                        .putString("userEmail", response.body().getUser().getEmail())
+                        .putString("userMobile", response.body().getUser().getMobile())
                         .putString("token", token)
                         .apply();
 

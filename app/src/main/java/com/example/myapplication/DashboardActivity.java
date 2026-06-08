@@ -153,6 +153,8 @@ public class DashboardActivity extends AppCompatActivity {
                             intent.putExtra("brandCategory", brand.getCategory());
                             intent.putExtra("brandInvestment", brand.getInvestment());
                             intent.putExtra("brandLogoUrl", brand.getLogoUrl());
+                            intent.putExtra("ownerEmail", brand.getOwnerEmail());
+                            intent.putExtra("ownerMobile", brand.getOwnerMobile());
                             startActivity(intent);
                         }
 

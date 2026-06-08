@@ -14,7 +14,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tvBrandCount, tvUserCount, tvEmail1;
+    private TextView tvBrandCount, tvUserCount, tvEmail1, tvEmail2, tvEmail3, tvEmail4;
     private Button btnGetStarted, btnNavRegister, btnNavLogin;
 
     @Override
@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         tvUserCount = findViewById(R.id.tvUserCount);
         btnGetStarted = findViewById(R.id.btnGetStarted);
         tvEmail1 = findViewById(R.id.tvEmail1);
+        tvEmail2 = findViewById(R.id.tvEmail2);
+        tvEmail3 = findViewById(R.id.tvEmail3);
+        tvEmail4 = findViewById(R.id.tvEmail4);
         btnNavLogin = findViewById(R.id.btnNavLogin);
         btnNavRegister = findViewById(R.id.btnNavRegister);
 
@@ -62,6 +65,24 @@ public class MainActivity extends AppCompatActivity {
         tvEmail1.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setData(Uri.parse("mailto:abbaskhan.cs25@bmsce.ac.in"));
+            startActivity(Intent.createChooser(intent, "Send Email"));
+        });
+
+        tvEmail2.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:abhinaya.cs24@bmsce.ac.in"));
+            startActivity(Intent.createChooser(intent, "Send Email"));
+        });
+
+        tvEmail3.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:abhishek.cs25@bmsce.ac.in"));
+            startActivity(Intent.createChooser(intent, "Send Email"));
+        });
+
+        tvEmail4.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:abhinayaks.cs25@bmsce.ac.in"));
             startActivity(Intent.createChooser(intent, "Send Email"));
         });
 

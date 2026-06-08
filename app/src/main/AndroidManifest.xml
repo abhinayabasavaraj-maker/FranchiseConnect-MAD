@@ -39,6 +39,9 @@
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".FavoritesActivity"
             android:exported="false" />
         <activity

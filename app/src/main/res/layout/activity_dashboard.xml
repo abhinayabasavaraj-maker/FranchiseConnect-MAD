@@ -120,6 +120,13 @@
         </LinearLayout>
 
         <!-- ADVERTISEMENT CAROUSEL -->
+        <ImageView
+            android:id="@+id/ivAdCarousel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ad1" />
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -129,13 +136,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/ivAdCarousel"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ad1" />
 
                 <ImageButton
                     android:id="@+id/btnAdPrev"
@@ -234,12 +234,15 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
             <TextView
+                android:id="@+id/tvDashEmails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="8dp"
                 android:text="abbaskhan.cs25@bmsce.ac.in\nabhishek.cs25@bmsce.ac.in\nabhinaya.ec24@bmsce.ac.in\nabhinayaks.cs25@bmsce.ac.in"
-                android:textColor="#B3FFFFFF" />
+                android:textColor="#B3FFFFFF"
+                android:autoLink="email"
+                android:textColorLink="#60a5fa" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

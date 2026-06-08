@@ -23,9 +23,9 @@ exports.seedBrands = async (req, res) => {
     try {
         await Brand.deleteMany({});
         const sampleBrands = [
-            { name: "Burger King", category: "Food & Beverages", investment: "₹1.5Cr - 3Cr", logoUrl: "https://logo.clearbit.com/burgerking.com" },
-            { name: "Lakme Salon", category: "Beauty & Salon", investment: "₹50L - 1Cr", logoUrl: "https://logo.clearbit.com/lakme.com" },
-            { name: "Tealogy", category: "Food & Beverages", investment: "₹10L - 20L", logoUrl: "https://logo.clearbit.com/tealogy.in" }
+            { name: "Burger King", category: "Food & Beverages", investment: "₹1.5Cr - 3Cr", logoUrl: "https://logo.clearbit.com/burgerking.com", ownerEmail: "abbaskhan.cs25@bmsce.ac.in", ownerMobile: "9876543210" },
+            { name: "Lakme Salon", category: "Beauty & Salon", investment: "₹50L - 1Cr", logoUrl: "https://logo.clearbit.com/lakme.com", ownerEmail: "abhinaya.cs24@bmsce.ac.in", ownerMobile: "9876543211" },
+            { name: "Tealogy", category: "Food & Beverages", investment: "₹10L - 20L", logoUrl: "https://logo.clearbit.com/tealogy.in", ownerEmail: "abhishek.cs25@bmsce.ac.in", ownerMobile: "9876543212" }
         ];
         await Brand.insertMany(sampleBrands);
         res.send("✅ Sample data added successfully!");

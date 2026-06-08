@@ -56,4 +56,19 @@ public class User {
     public String getGender() { return gender; }
     public String getState() { return state; }
     public String getQualification() { return qualification; }
+
+    public void setFirstName(String firstName) { this.firstName = firstName; }
+    public void setMiddleName(String middleName) { this.middleName = middleName; }
+    public void setLastName(String lastName) { this.lastName = lastName; }
+    public void setDob(String dob) { this.dob = dob; }
+    public void setCity(String city) { this.city = city; }
+    public void setPincode(String pincode) { this.pincode = pincode; }
+    public void setAddress(String address) { this.address = address; }
+    public void setOccupation(String occupation) { this.occupation = occupation; }
+    public void setMobile(String mobile) { this.mobile = mobile; }
+    public void setEmail(String email) { this.email = email; }
+    public void setPassword(String password) { this.password = password; }
+    public void setGender(String gender) { this.gender = gender; }
+    public void setState(String state) { this.state = state; }
+    public void setQualification(String qualification) { this.qualification = qualification; }
 }

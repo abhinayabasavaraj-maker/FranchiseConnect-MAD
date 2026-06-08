@@ -9,10 +9,12 @@ public class UserResponse {
         private String id;
         private String email;
         private String name;
+        private String mobile;
 
         public String getId() { return id; }
         public String getName() { return name; }
         public String getEmail() { return email; }
+        public String getMobile() { return mobile; }
     }
 
     public String getMessage() { return message; }

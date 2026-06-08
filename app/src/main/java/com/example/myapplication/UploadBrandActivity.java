@@ -145,7 +145,9 @@ public class UploadBrandActivity extends AppCompatActivity {
             ? "https://logo.clearbit.com/" + name.toLowerCase().replace(" ", "") + ".com" 
             : selectedLogoUrl; 
 
-        Brand newBrand = new Brand(name, category, investment, logoUrl);
+        String ownerEmail = getSharedPreferences("FranchiseConnect", MODE_PRIVATE).getString("userEmail", "");
+        String ownerMobile = getSharedPreferences("FranchiseConnect", MODE_PRIVATE).getString("userMobile", "");
+        Brand newBrand = new Brand(name, category, investment, logoUrl, ownerEmail, ownerMobile);
 
         ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
         apiService.createBrand(newBrand).enqueue(new Callback<Brand>() {

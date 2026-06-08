@@ -37,6 +37,9 @@ public interface ApiService {
     @GET("api/users/{id}")
     Call<User> getProfile(@Header("Authorization") String token, @Path("id") String userId);
 
+    @retrofit2.http.PUT("api/users/{id}")
+    Call<User> updateProfile(@Header("Authorization") String token, @Path("id") String userId, @Body User user);
+
     @POST("api/brands")
     Call<Brand> createBrand(@Body Brand brand);
 
