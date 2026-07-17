@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mini Text Search Engine - A web-based search dashboard demonstrating TFC (Theory of Formal Computation) concepts such as Tries, Regular Expressions, Tokenization, and Pattern Matching.">
+    <title>Mini Text Search Engine - TFC Theory Project</title>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-decor">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Main Header -->
+        <header class="app-header">
+            <div class="header-badge">TFC Project Showcase</div>
+            <h1 id="app-title"><i class="fa-solid fa-magnifying-glass-chart icon-gradient"></i> Mini Text Search Engine</h1>
+            <p class="app-subtitle">Demonstrating <span>Tries (Prefix Trees)</span> for autocomplete, <span>Regular Expressions</span> for matching, and <span>Tokenization</span> for indexing.</p>
+        </header>
+
+        <!-- Main Workspace Grid -->
+        <main class="main-layout">
+            
+            <!-- Left Panel: Indexing & Uploads -->
+            <section class="control-panel glass-card" aria-labelledby="controls-heading">
+                <h2 id="controls-heading"><i class="fa-solid fa-folder-tree"></i> Document Repository</h2>
+                <p class="panel-desc">Upload custom text files to expand the search index. The system tokenizes text and updates the Trie structure in real-time.</p>
+
+                <!-- Drag & Drop / File Upload Form -->
+                <div class="upload-zone" id="drop-zone">
+                    <form id="upload-form" enctype="multipart/form-data">
+                        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                        <p class="upload-text">Drag & drop a <strong>.txt</strong> file here or click to browse</p>
+                        <input type="file" id="file-input" name="file" accept=".txt" required style="display: none;">
+                        <button type="button" id="browse-btn" class="btn btn-secondary">Select File</button>
+                    </form>
+                </div>
+                <div id="upload-status" class="status-msg"></div>
+
+                <!-- TFC Concept Info Box -->
+                <div class="tfc-info-card">
+                    <h3><i class="fa-solid fa-brain"></i> TFC Concepts Used</h3>
+                    <ul class="concept-list">
+                        <li>
+                            <strong>Trie Data Structure:</strong> Implements prefix tree logic for \(O(L)\) time complexity autocompletion, where \(L\) is prefix length.
+                        </li>
+                        <li>
+                            <strong>Deterministic Tokenization:</strong> Lexical analyzer splits documents into alphabet characters and builds standard token strings.
+                        </li>
+                        <li>
+                            <strong>Regular Expression (RegEx):</strong> Evaluates formal language patterns using Python's NFA/DFA engines.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Right Panel: Search Dashboard -->
+            <section class="search-panel glass-card" aria-labelledby="search-heading">
+                <h2 id="search-heading" class="sr-only">Search Interface</h2>
+                
+                <!-- Search Inputs Group -->
+                <div class="search-bar-container">
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-inner-icon"></i>
+                        <input type="text" id="search-input" placeholder="Type to search or test prefixes..." autocomplete="off" aria-label="Search documents">
+                        <button type="button" id="clear-btn" class="clear-input-btn" title="Clear search" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
+                        <!-- Autocomplete Suggestions List -->
+                        <ul id="autocomplete-dropdown" class="autocomplete-list" role="listbox" aria-label="Search suggestions" style="display: none;"></ul>
+                    </div>
+
+                    <div class="search-actions">
+                        <!-- Mode Selector (Normal / Regex) -->
+                        <div class="mode-toggle-group">
+                            <button type="button" id="mode-normal" class="mode-btn active" data-mode="normal" title="Case-insensitive literal search">
+                                <i class="fa-solid fa-font"></i> Literal
+                            </button>
+                            <button type="button" id="mode-regex" class="mode-btn" data-mode="regex" title="Search using Python Regular Expressions">
+                                <i class="fa-solid fa-code"></i> RegEx
+                            </button>
+                        </div>
+                        <button type="button" id="search-btn" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Search</button>
+                    </div>
+                </div>
+
+                <!-- Live Results Area -->
+                <div class="results-wrapper">
+                    <div class="results-header">
+                        <h3 id="results-count-text">Search Results</h3>
+                        <div id="search-metadata" class="search-meta">Ready to search</div>
+                    </div>
+
+                    <!-- Dynamic list of results -->
+                    <div id="results-container" class="results-list">
+                        <div class="empty-state">
+                            <i class="fa-solid fa-magnifying-glass empty-icon"></i>
+                            <p>Enter a query above to search across all locally stored text files.</p>
+                            <p class="empty-hint">Try searching for keywords like <strong>"automata"</strong>, <strong>"language"</strong>, or use RegEx patterns like <strong>"P[D|F]A"</strong> in RegEx mode.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Theory of Formal Computation Project &copy; 2026. Made with <i class="fa-solid fa-heart icon-heart"></i> for academic demonstration.</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}?v=2"></script>
+</body>
+</html>

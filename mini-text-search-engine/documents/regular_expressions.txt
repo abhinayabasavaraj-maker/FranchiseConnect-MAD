@@ -1,0 +1,18 @@
+Regular Expressions and Pattern Matching in Formal Language Theory
+===================================================================
+
+A regular expression (sometimes called a rational expression) is a sequence of characters that specifies a search pattern in text. Usually, such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation.
+
+In theoretical computer science and formal language theory, a regular expression (regex) defines a regular language. A regular language is a formal language that can be described by a regular expression, or recognized by a Finite State Automaton (either a Deterministic Finite Automaton (DFA) or a Non-Deterministic Finite Automaton (NFA)).
+
+Formal Definition of Regular Expressions:
+Given an alphabet Sigma, the set of regular expressions over Sigma is defined recursively:
+1. Empty set (represented by empty set symbol) is a regular expression.
+2. Empty string (represented by epsilon or lambda) is a regular expression.
+3. For each symbol 'a' in Sigma, 'a' is a regular expression.
+4. If R and S are regular expressions, then:
+   - (R + S) or (R | S) is a regular expression representing Union or Alternation.
+   - (R . S) or (RS) is a regular expression representing Concatenation.
+   - (R*) is a regular expression representing Kleene closure or Kleene star (zero or more repetitions).
+
+Regular expressions are widely used in search engines, text processors, lexers, and compiler design. In modern programming, the 're' module in Python offers regular expression matching capabilities which compile regex patterns into bytecode to match target inputs.

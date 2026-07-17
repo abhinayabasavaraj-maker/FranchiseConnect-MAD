@@ -14,44 +14,46 @@
         android:background="#020617"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:padding="@dimen/navbar_padding"
+        android:minHeight="@dimen/navbar_height">
 
         <ImageView
             android:id="@+id/btnBack"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/icon_size_standard"
+            android:layout_height="@dimen/icon_size_standard"
             android:src="@drawable/logo"
-            android:contentDescription="Back" />
+            android:contentDescription="Back"
+            android:padding="4dp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/spacing_small"
             android:text="FranchiseConnect - Favorites"
             android:textColor="#60a5fa"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_size_header"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnFavDashboard"
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
+            android:layout_height="@dimen/button_height_small"
             android:backgroundTint="#60a5fa"
             android:text="Dashboard"
             android:textAllCaps="false"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_size_small"
             android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btnFavLogout"
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:layout_marginStart="8dp"
+            android:layout_height="@dimen/button_height_small"
+            android:layout_marginStart="@dimen/spacing_small"
             android:backgroundTint="#FF6347"
             android:text="Logout"
             android:textAllCaps="false"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_size_small"
             android:textColor="#FFFFFF" />
     </LinearLayout>
 
@@ -62,13 +64,13 @@
         android:gravity="center"
         android:text="No favorite brands yet"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="@dimen/text_size_header"
         android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFavorites"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp" />
+        android:padding="@dimen/spacing_small" />
 
 </LinearLayout>

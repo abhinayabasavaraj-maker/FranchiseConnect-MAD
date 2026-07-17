@@ -1,0 +1,17 @@
+Introduction to the Theory of Formal Computation (TFC)
+======================================================
+
+The Theory of Formal Computation (also known as Theory of Computation or Formal Languages and Automata Theory) is a branch of computer science and mathematics that deals with whether and how efficiently problems can be solved on a model of computation, using an algorithm. The field is divided into three major branches: automata theory and formal languages, computability theory, and computational complexity theory.
+
+Automata theory is the study of abstract machines (or more appropriately, abstract mathematical systems or models) and the computational problems that can be solved using these machines. These abstract machines are called automata. Automaton comes from the Greek word which means "self-acting".
+
+A formal language is a set of strings of symbols that may be constrained by rules that are specific to it. Formal languages are structured syntactically and can be defined using formal grammars. The alphabet of a formal language is the set of symbols, letters, or tokens from which the strings of the language may be written.
+
+Key topics in TFC:
+1. Finite Automata (DFA and NFA)
+2. Regular Expressions and Regular Languages
+3. Context-Free Grammars (CFG) and Pushdown Automata (PDA)
+4. Turing Machines and Undecidability
+5. Complexity Classes (P, NP, NP-complete, NP-hard)
+
+Understanding computation model limitations allows software engineers to write highly optimized parsing algorithms and compilers. Tokenization and lexical analysis are direct applications of finite automata and regular languages in everyday software development.

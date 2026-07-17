@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A1C2D"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- HEADER TOOLBAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#60a5fa"
+                android:contentDescription="Go Back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Edit Profile"
+                android:textColor="#60a5fa"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- INPUT FIELDS -->
+        
+        <TextView 
+            android:text="First Name *" 
+            android:textColor="#cfefff" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp" />
+        <EditText 
+            android:id="@+id/etEditFirstName" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:hint="First Name" 
+            android:textColor="#FFFFFF" 
+            android:textColorHint="#4DFFFFFF" 
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView 
+            android:text="Middle Name" 
+            android:textColor="#cfefff" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp" />
+        <EditText 
+            android:id="@+id/etEditMiddleName" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:hint="Middle Name" 
+            android:textColor="#FFFFFF" 
+            android:textColorHint="#4DFFFFFF" 
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView 
+            android:text="Last Name *" 
+            android:textColor="#cfefff" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp" />
+        <EditText 
+            android:id="@+id/etEditLastName" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:hint="Last Name" 
+            android:textColor="#FFFFFF" 
+            android:textColorHint="#4DFFFFFF" 
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView 
+            android:text="Mobile Number *" 
+            android:textColor="#cfefff" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp" />
+        <EditText 
+            android:id="@+id/etEditMobile" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:hint="10 digits" 
+            android:inputType="phone"
+            android:textColor="#FFFFFF" 
+            android:textColorHint="#4DFFFFFF" 
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView 
+            android:text="State *" 
+            android:textColor="#cfefff" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp" />
+        <Spinner 
+            android:id="@+id/spEditState" 
+            android:layout_width="match_parent" 
+            android:layout_height="48dp" 
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView 
+            android:text="City *" 
+            android:textColor="#cfefff" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp" />
+        <EditText 
+            android:id="@+id/etEditCity" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:hint="City" 
+            android:textColor="#FFFFFF" 
+            android:textColorHint="#4DFFFFFF" 
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView 
+            android:text="Gender *" 
+            android:textColor="#cfefff" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp" />
+        <Spinner 
+            android:id="@+id/spEditGender" 
+            android:layout_width="match_parent" 
+            android:layout_height="48dp" 
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView 
+            android:text="Qualification *" 
+            android:textColor="#cfefff" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp" />
+        <Spinner 
+            android:id="@+id/spEditQualification" 
+            android:layout_width="match_parent" 
+            android:layout_height="48dp" 
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="32dp" />
+
+        <!-- BUTTONS -->
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="#3b82f6"
+            android:text="Save Changes"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnCancelEdit"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="#1e293b"
+            android:text="Cancel"
+            android:textColor="#94a3b8"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>

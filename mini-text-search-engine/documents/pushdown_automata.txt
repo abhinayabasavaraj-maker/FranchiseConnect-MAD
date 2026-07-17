@@ -1,0 +1,21 @@
+Context-Free Grammars and Pushdown Automata
+===========================================
+
+In the Theory of Computation, a Pushdown Automaton (PDA) is a type of automaton that employs a stack. Pushdown automata are more capable than finite state machines but less capable than Turing machines. Deterministic pushdown automata can recognize all deterministic context-free languages, while non-deterministic ones can recognize all context-free languages.
+
+A Pushdown Automaton is formally defined as a 7-tuple:
+M = (Q, Sigma, Gamma, delta, q0, Z0, F)
+where:
+- Q is a finite set of states.
+- Sigma is the input alphabet.
+- Gamma is the stack alphabet.
+- delta is the transition function mapping Q x (Sigma union {epsilon}) x Gamma to finite subsets of Q x Gamma*.
+- q0 is the start state.
+- Z0 is the start stack symbol.
+- F is the set of accepting states.
+
+PDAs differ from finite automata in two ways:
+1. They can use the top of the stack to decide which transition to take.
+2. They can push and pop symbols to/from the stack during a transition.
+
+Context-Free Grammars (CFG) describe context-free languages. In compilation, context-free grammars are used to define the syntax of programming languages, and parsers use pushdown automata models to validate and construct syntax trees.

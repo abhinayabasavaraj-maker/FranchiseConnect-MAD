@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
     private static Retrofit retrofit = null;
     // 10.0.2.2 is the IP address to access localhost from the emulator
-    private static final String BASE_URL = "http://10.81.172.117:5000/";
+    private static final String BASE_URL = "http://10.74.100.117:5000/";
 
     public static Retrofit getClient() {
         if (retrofit == null) {
